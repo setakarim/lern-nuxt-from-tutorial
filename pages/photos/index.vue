@@ -17,6 +17,11 @@ export default {
     const photos = response.data.map((v) => v)
 
     return { photos }
+  },
+  head() {
+    return {
+      title: 'Photo Lists - Learn Vue'
+    }
   }
 }
 </script>

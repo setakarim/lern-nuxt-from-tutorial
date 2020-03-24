@@ -14,6 +14,12 @@ export default {
     const photo = response.data
 
     return { photo }
+  },
+  head() {
+    return {
+      title: '',
+      titleTemplate: `%s ${this.photo.title} - Learn Vue`
+    }
   }
 }
 </script>

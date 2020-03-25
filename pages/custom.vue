@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>In Theatre</h1>
+    <h1>In Custom</h1>
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'theatre'
+  layout: 'custom'
 }
 </script>
 

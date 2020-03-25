@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="theatre-body">
+    <div id="custom-body">
       <nuxt />
     </div>
   </div>
@@ -11,7 +11,7 @@ export default {}
 </script>
 
 <style>
-#theatre-body {
+#custom-body {
   background-color: black;
   color: white;
 }

@@ -8,15 +8,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  async asyncData({ $axios }) {
+  async fetch({ $axios, store }) {
     const response = await $axios.get('/photos')
     // eslint-disable-next-line no-console
     console.log('Data photo : ', response.data)
 
     const photos = response.data.map((v) => v)
 
-    return { photos }
+    store.commit('SET_PHOTOS', photos)
+  },
+  computed: {
+    ...mapState({
+      photos: 'photos'
+    })
   },
   head() {
     return {

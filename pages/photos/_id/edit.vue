@@ -9,8 +9,12 @@
 
 <script>
 export default {
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['photo'],
+  props: {
+    photo: {
+      type: Object,
+      default: null
+    }
+  },
   head() {
     return {
       title: 'Edit'

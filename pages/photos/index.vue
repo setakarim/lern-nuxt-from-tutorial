@@ -12,9 +12,6 @@ import { mapState } from 'vuex'
 export default {
   async fetch({ $axios, store }) {
     const response = await $axios.get('/photos')
-    // eslint-disable-next-line no-console
-    console.log('Data photo : ', response.data)
-
     const photos = response.data.map((v) => v)
 
     store.commit('SET_PHOTOS', photos)
